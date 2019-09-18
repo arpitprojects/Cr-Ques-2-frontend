@@ -3,8 +3,7 @@
 
 # Installing the application
 ```
-- Open Two terminals
-## In one terminal
+## In the terminal
 - git clone https://github.com/arpitprojects/Cr-Ques-2-frontend.git
 - cd Cr-Ques-2-frontend
 - npm install 

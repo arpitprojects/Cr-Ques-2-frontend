@@ -1,0 +1,63 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="card-2 bg">
+    <span>Bug Report</span>
+    <span class="example-spacer"></span>
+    <!-- <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
+    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon> -->
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="cred-container">
+  <div class="pull-right">
+    <mat-slide-toggle [formControl]="autoRenew" (change)="onChange()"
+      >Grid View</mat-slide-toggle
+    >
+  </div>
+  <!-- container -->
+  <div class="cred-table" *ngIf="!gridView">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+      <!-- Position Column -->
+      <ng-container matColumnDef="scan_id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Scan Id</th>
+        <td mat-cell *matCellDef="let element">{{ element.scan_id }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="project_name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Project Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.project_name }}</td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="issue">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Issue</th>
+        <td mat-cell *matCellDef="let element">{{ element.issue }}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+  </div>
+  <div class="cred-table flex" *ngIf="gridView">
+      <div class="flex-4" *ngFor="let ele of List | paginate: { itemsPerPage: 9, currentPage: p }">
+
+        <mat-card>
+            <mat-basic-chip color="primary"> <p class="id"> {{ele.scan_id}}</p></mat-basic-chip>
+          <p>{{ ele.project_name | uppercase }}</p>
+          <br />
+          <button mat-button-raised color="primary" mat-button [matMenuTriggerFor]="menu">Open issue</button>
+          <mat-menu #menu="matMenu">
+              {{ele.issue}}
+            </mat-menu>
+        </mat-card>
+      </div>
+        <br />
+        <br /><br />
+        <br /><br />
+
+    </div>
+    <div class="center">
+    <pagination-controls  *ngIf="gridView" (pageChange)="p = $event"></pagination-controls>
+  </div>
+    <!-- end of container -->
+</div>

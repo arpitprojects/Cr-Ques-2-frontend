@@ -1,0 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+html, body{
+  font-family: 'Roboto' , sans-serif;
+}
+.mat-toolbar-multiple-rows {
+  min-height: 50px;
+  height:5vh;
+}

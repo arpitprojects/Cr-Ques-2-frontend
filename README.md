@@ -1,27 +1,47 @@
-# Frontend
+# Route Mapper
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.0.
+Name i.e Route Mapper is just for refrence, it has not meaning..
 
-## Development server
+ 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Installing the application
+```
+- Open Two terminals
+## In one terminal
+- git clone https://github.com/arpitprojects/Route-MapperFrontend.git
+- cd Route-MapperFrontend
+- npm install 
+- ng serve
 
-## Code scaffolding
+## Second Terminal
+-  git clone https://github.com/arpitprojects/Route-MapperBackend.git
+- cd RouteMapper
+- cd backend
+- npm install
+- node index.js or nodemon index.js
+```
+OPEN CHROMW WITH http://localhost:4200
+### Tech Stack Used:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Following Libraries are used inside
 
-## Build
+* Angular 7
+* Express.js /Node.js
+* Google Maps
+* Turf 
+* Angular Material
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Run 
 
-## Running end-to-end tests
+I have tested all testCase these are running good.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Bugs
+- Can add other google map showing points etc,
+- Can modify user exp.
+- Add checks in input
+- 
+### IN CASE OF ANY ERROR WHILE RUNNING PLEASE MAIL ME @ arpit.engghelp@gmail.com
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

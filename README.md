@@ -9,7 +9,7 @@
 - npm install 
 - ng serve
 
-OPEN CHROMW WITH http://localhost:4200
+OPEN CHROME WITH http://localhost:4200
 ### Tech Stack Used:
 
 Following Libraries are used inside
@@ -26,5 +26,5 @@ I have tested all testCase these are running good.
 - Can have better pagination
 - Can have search panel
 - Can have CURD functionality
-- 
+- Unit Testing
 ### IN CASE OF ANY ERROR WHILE RUNNING PLEASE MAIL ME @ arpit.engghelp@gmail.com
